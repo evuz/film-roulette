@@ -39,14 +39,14 @@ export function App () {
       <form onSubmit={handleSubmit}>
         <select name="provider">
           {providers?.map((provider) => (
-            <option key={provider.id} value={provider.id}>
+            <option key={provider.id} value={provider.short_name}>
               {provider.clear_name}
             </option>
           ))}
         </select>
         <select name="genre">
           {genres?.map((genre) => (
-            <option key={genre.id} value={genre.id}>
+            <option key={genre.id} value={genre.short_name}>
               {genre.translation}
             </option>
           ))}

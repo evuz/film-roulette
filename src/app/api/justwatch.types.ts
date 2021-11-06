@@ -1,10 +1,10 @@
 /* eslint-disable camelcase */
 export type SearchParams = {
   content_types?: ContentType[];
-  genres?: string[];
+  genres?: Genre['short_name'][];
   page_size?: number;
   page?: number;
-  providers?: ProviderID[];
+  providers?: Provider['short_name'][];
   release_year_from?: unknown;
   release_year_until?: unknown;
   scoring_filter_types?: unknown;
@@ -14,9 +14,8 @@ export type ContentType = 'movie'| 'show'
 
 export type MonetizationType = 'buy' | 'rent' | 'flatrate'
 
-export type ProviderID = number;
 export type Provider = {
-  id: ProviderID;
+  id: number;
   technical_name: string;
   short_name: string;
   clear_name: string;
