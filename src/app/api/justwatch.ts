@@ -1,3 +1,4 @@
+import { memoize } from '../../utils/memoize'
 import { Genre, Provider, SearchParams, SearchResults } from './justwatch.types'
 
 const baseUrl = 'https://apis.justwatch.com'
@@ -13,15 +14,17 @@ function getUrl (path: string, addLocale = true) {
   return url
 }
 
-export function getProviders (): Promise<Provider[]> {
+function _getProviders (): Promise<Provider[]> {
   return fetch(getUrl('providers')).then(res => res.json())
 }
+export const getProviders = memoize(_getProviders)
 
-export function getGenres (): Promise<Genre[]> {
+function _getGenres (): Promise<Genre[]> {
   return fetch(getUrl('genres')).then(res => res.json())
 }
+export const getGenres = memoize(_getGenres)
 
-export function search (searchParams: SearchParams): Promise<SearchResults> {
+function _search (searchParams: SearchParams): Promise<SearchResults> {
   const defaultParams = {
     content_types: null,
     presentation_types: null,
@@ -50,3 +53,4 @@ export function search (searchParams: SearchParams): Promise<SearchResults> {
     }
   }).then(res => res.json())
 }
+export const search = memoize(_search)
