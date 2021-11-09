@@ -1,0 +1,12 @@
+.button {
+  padding: 0;
+  background: none;
+  display: flex;
+  border: none;
+  transition: opacity 500ms;
+  opacity: 0.25;
+}
+
+.button.is-active {
+  opacity: 1;
+}

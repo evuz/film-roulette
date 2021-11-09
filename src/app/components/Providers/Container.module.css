@@ -1,0 +1,12 @@
+.container {
+  background-color: var(--medium);
+  padding: 1rem;
+  border-radius: 1rem;
+  min-height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+  gap: 1rem;
+}
