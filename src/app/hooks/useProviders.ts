@@ -3,7 +3,7 @@ import { getProviders } from '../api/justwatch'
 import { useRequest } from './useRequest'
 
 export function useProviders () {
-  const [fetchProviders, providers] = useRequest(getProviders)
+  const [fetchProviders, providers = []] = useRequest(getProviders)
 
   useEffect(() => {
     fetchProviders()

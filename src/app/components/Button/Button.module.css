@@ -54,11 +54,11 @@
   cursor: not-allowed;
 
   --button-bg: transparent;
-  --button-color: var(--highlight);
-  --button-border-color: var(--highlight);
+  --button-color: var(--dark);
+  --button-border-color: var(--dark);
   --button-active-bg: transparent;
-  --button-active-color: var(--highlight);
-  --button-active-border-color: var(--highlight);
+  --button-active-color: var(--dark);
+  --button-active-border-color: var(--dark);
 }
 
 .Button.is-square {

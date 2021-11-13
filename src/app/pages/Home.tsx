@@ -1,9 +1,11 @@
 import { useEffect } from 'preact/hooks'
 import { getGenres, getProviders } from '../api/justwatch'
 import { useRequest } from '../hooks/useRequest'
+import { useStoreProvidersId } from '../hooks/useStoreProvidersId'
 import { randomSearch } from '../services/randomSearch'
 
 export function HomePage () {
+  const [storeProvidersId] = useStoreProvidersId()
   const [fetchProviders, providers] = useRequest(getProviders)
   const [fetchGenres, genres] = useRequest(getGenres)
   const [fetchRandom, randomResult] = useRequest(randomSearch)
@@ -12,6 +14,8 @@ export function HomePage () {
     fetchProviders()
     fetchGenres()
   }, [])
+
+  console.log(storeProvidersId)
 
   function handleSubmit (ev: Event) {
     ev.preventDefault()
