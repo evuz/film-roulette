@@ -1,4 +1,9 @@
 .container {
+  display: grid;
+  gap: 1rem;
+}
+
+.content {
   background-color: var(--medium);
   padding: 1rem;
   border-radius: 1rem;

@@ -14,7 +14,7 @@ export function Providers () {
   }, [])
 
   return (
-    <ProvidersContainer>
+    <ProvidersContainer onSubmit={() => {}}>
       {providers?.map((provider) => {
         return (
           <ProviderImageButton
