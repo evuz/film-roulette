@@ -1,0 +1,71 @@
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  height: 3rem;
+  color: var(--button-color);
+  background-color: var(--button-bg);
+  border-color: var(--button-border-color);
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  transition: all 0.15s ease 0s;
+  white-space: nowrap;
+}
+
+/* .Button:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-border-color);
+} */
+
+.Button:active {
+  transition: none;
+  background-color: var(--button-active-bg);
+  color: var(--button-active-color);
+  border-color: var(--button-active-border-color);
+}
+
+.Button.is-border {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.Button.is-primary {
+  --button-bg: var(--highlight);
+  --button-color: var(--white);
+  --button-border-color: transparent;
+  --button-active-bg: transparent;
+  --button-active-color: var(--highlight);
+  --button-active-border-color: var(--highlight);
+}
+
+.Button.is-dark {
+  --button-bg: var(--dark);
+  --button-color: var(--white);
+  --button-border-color: transparent;
+  --button-active-bg: transparent;
+  --button-active-color: var(--dark);
+  --button-active-border-color: var(--dark);
+}
+
+.Button.is-disabled {
+  cursor: not-allowed;
+
+  --button-bg: transparent;
+  --button-color: var(--highlight);
+  --button-border-color: var(--highlight);
+  --button-active-bg: transparent;
+  --button-active-color: var(--highlight);
+  --button-active-border-color: var(--highlight);
+}
+
+.Button.is-square {
+  width: 3rem;
+  padding: 0;
+}
+
+.Button.is-rounded {
+  border-radius: 3rem;
+}
