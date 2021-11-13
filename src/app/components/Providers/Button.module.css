@@ -5,7 +5,7 @@
   border: none;
   transition: opacity 500ms;
   opacity: 0.25;
-  border-radius: 0.75rem;
+  border-radius: var(--radius);
   overflow: hidden;
 }
 

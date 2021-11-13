@@ -6,7 +6,7 @@
 .content {
   background-color: var(--medium);
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: var(--radius);
   min-height: 100%;
 }
 
