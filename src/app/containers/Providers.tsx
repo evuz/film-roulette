@@ -7,22 +7,14 @@ import { useLocation } from '../hooks/useLocation'
 import { useProviders } from '../hooks/useProviders'
 import { useStoreProvidersId } from '../hooks/useStoreProvidersId'
 import { Routes } from '../router'
-
-function toObjectSelected (
-  ids: Provider['id'][]
-): Record<Provider['id'], boolean> {
-  return ids.reduce((acc, id) => {
-    acc[id] = true
-    return acc
-  }, {} as any)
-}
+import { arr2Obj } from '../../utils/arr2Obj'
 
 export function Providers () {
   const [storeProvidersId, setStoreProviders] = useStoreProvidersId()
   const { push } = useLocation()
   const { providers } = useProviders()
   const [selected, setSelected] = useState(() =>
-    toObjectSelected(storeProvidersId)
+    arr2Obj(storeProvidersId)
   )
 
   const handleSelected = useCallback((provider: Provider) => {

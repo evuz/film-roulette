@@ -1,0 +1,27 @@
+.button {
+  aspect-ratio: 4/3;
+  padding: 0.5rem;
+  border: none;
+  display: flex;
+  text-align: start;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: var(--radius);
+  background: var(--genre-btn-bg);
+  color: var(--genre-btn-color);
+}
+
+.is-light {
+  --genre-btn-bg: var(--light);
+  --genre-btn-color: var(--dark)
+}
+
+.is-medium {
+  --genre-btn-bg: var(--medium);
+  --genre-btn-color: var(--white)
+}
+
+.is-highlight {
+  --genre-btn-bg: var(--highlight);
+  --genre-btn-color: var(--white)
+}
