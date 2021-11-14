@@ -1,7 +1,7 @@
 import { memoize } from '../../utils/memoize'
 import { Genre, Provider, SearchParams, SearchResults } from './justwatch.types'
 
-const baseUrl = 'https://apis.justwatch.com'
+const baseUrl = 'https://cors-anywhere.herokuapp.com/https://apis.justwatch.com'
 const locale = encodeURIComponent(navigator.language.replace('-', '_'))
 
 function getUrl (path: string, addLocale = true) {
