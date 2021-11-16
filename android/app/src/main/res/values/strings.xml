@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Film roulette</string>
+    <string name="title_activity_main">Film roulette</string>
+    <string name="package_name">com.dhormigo.filmroulette</string>
+    <string name="custom_url_scheme">com.dhormigo.filmroulette</string>
+</resources>

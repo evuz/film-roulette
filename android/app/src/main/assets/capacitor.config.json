@@ -1,0 +1,6 @@
+{
+	"appId": "com.dhormigo.filmroulette",
+	"appName": "Film roulette",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
