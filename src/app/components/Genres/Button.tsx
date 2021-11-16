@@ -9,12 +9,13 @@ type GenreColor = 'light' | 'medium' | 'highlight'
 type Props = {
   genre: Genre
   color: GenreColor
+  onClick: (genre: Genre) => void
 }
 
-export function GenreButton ({ genre, color }: Props) {
+export function GenreButton ({ genre, color, onClick }: Props) {
   const classnames = filterClassnames([styles.button, styles[`is${capitalize(color)}`]])
 
-  return <button className={classnames}>
+  return <button onClick={() => onClick(genre)} className={classnames}>
       {genre.translation}
   </button>
 }
