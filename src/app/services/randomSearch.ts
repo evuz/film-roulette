@@ -14,5 +14,6 @@ export async function randomSearch (params: SearchParams) {
   params.page_size = 1
   params.page = randomPosition
 
-  return search(params)
+  const result = await search(params)
+  return result.items[0]
 }
